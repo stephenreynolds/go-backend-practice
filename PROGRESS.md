@@ -11,7 +11,7 @@
 
 | Date | Topic | Status | Time | Review |
 |------|-------|--------|------|--------|
-| 2026-02-02 | Hello C# | ⏳ Pending | - | - |
+| 2026-02-02 | Hello C# | ✅ Complete | ~25m | 100/100 |
 
 ## Weekly Projects
 
@@ -24,7 +24,7 @@
 ## Skills Progress
 
 ### Phase 0: C# Fundamentals
-- [ ] Console I/O
+- [x] Console I/O
 - [ ] Variables & Types
 - [ ] Control Flow
 - [ ] Methods
