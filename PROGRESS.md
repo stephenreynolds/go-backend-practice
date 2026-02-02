@@ -1,43 +1,71 @@
 # Progress Tracker
 
-## Current Week: Week 1 — ASP.NET Core Basics
-**Weekly Project**: TODO API with in-memory storage
+## Current Phase: Phase 0 — C# Fundamentals
+## Current Week: Week 1 — C# Basics
+
+**Weekly Project**: Task List CLI
+
+---
 
 ## Daily Challenges
 
-| Date | Topic | Status | Time | Notes |
-|------|-------|--------|------|-------|
-| 2026-02-02 | Minimal API Basics | ⏳ Pending | - | - |
+| Date | Topic | Status | Time | Review |
+|------|-------|--------|------|--------|
+| 2026-02-02 | Hello C# | ⏳ Pending | - | - |
 
 ## Weekly Projects
 
-| Week | Project | Status | Notes |
+| Week | Project | Status | Score |
 |------|---------|--------|-------|
-| 1 | TODO API (in-memory) | ⏳ Pending | - |
+| 1 | Task List CLI | ⏳ Pending | - |
 
-## Skills Unlocked
+---
 
+## Skills Progress
+
+### Phase 0: C# Fundamentals
+- [ ] Console I/O
+- [ ] Variables & Types
+- [ ] Control Flow
+- [ ] Methods
+- [ ] Collections & LINQ
+- [ ] Classes & Objects
+- [ ] Interfaces
+- [ ] Records
+- [ ] Null Safety
+- [ ] Async/Await Basics
+
+### Phase 1: ASP.NET Core Basics
 - [ ] Minimal APIs
+- [ ] Routing
+- [ ] HTTP Methods
+- [ ] JSON & DTOs
+- [ ] Status Codes
 - [ ] Dependency Injection
-- [ ] Middleware
 - [ ] Configuration
-- [ ] Model Binding & Validation
-- [ ] Error Handling
-- [ ] EF Core Basics
+- [ ] Middleware
+- [ ] Validation
+
+### Phase 2: Data Access
+- [ ] EF Core Setup
+- [ ] Migrations
+- [ ] CRUD Operations
+- [ ] Relationships
+- [ ] Querying
 - [ ] Repository Pattern
-- [ ] API Versioning
-- [ ] JWT Authentication
-- [ ] Unit Testing
-- [ ] Integration Testing
-- [ ] Clean Architecture
-- [ ] CQRS/MediatR
-- [ ] Caching
-- [ ] SignalR
-- [ ] Docker
-- [ ] CI/CD
+
+*(More phases unlocked as you progress)*
+
+---
 
 ## Review Log
 
-Reviews and feedback will be logged here after each submission.
+*Code reviews and feedback will be logged here.*
 
 ---
+
+## Notes
+
+- Started: 2026-02-02
+- Daily challenges: Weekdays, 8 AM ET
+- Goal: Consistent practice, gradual progression

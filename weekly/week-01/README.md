@@ -1,125 +1,144 @@
-# Week 1 Project: TODO API
+# Week 1 Project: Task List CLI
 
-**Estimated Time**: 3-5 hours total  
-**Deadline**: End of Week 1  
-**Difficulty**: ⭐⭐ Beginner-Intermediate
+**Estimated Time**: 2-3 hours total  
+**Difficulty**: ⭐ Beginner  
+**Topic**: C# Fundamentals in Practice
 
 ## Objective
 
-Build a complete TODO API using ASP.NET Core Minimal APIs with in-memory storage. This project consolidates all the daily lessons from Week 1.
+Build a simple command-line task manager. No databases, no web — just a console app that manages a list of tasks in memory.
 
 ## Requirements
 
 ### Core Features
 
-1. **CRUD Operations**
-   - `GET /todos` — List all todos (with optional filtering)
-   - `GET /todos/{id}` — Get a specific todo
-   - `POST /todos` — Create a new todo
-   - `PUT /todos/{id}` — Update a todo
-   - `DELETE /todos/{id}` — Delete a todo
-
-2. **Todo Model**
-   ```csharp
-   public record Todo
-   {
-       public int Id { get; init; }
-       public string Title { get; init; }
-       public string? Description { get; init; }
-       public bool IsComplete { get; init; }
-       public DateTime CreatedAt { get; init; }
-       public DateTime? CompletedAt { get; init; }
-   }
+1. **Menu-driven interface**
+   ```
+   === Task Manager ===
+   1. Add task
+   2. List tasks
+   3. Complete task
+   4. Remove task
+   5. Exit
+   
+   Choose an option: 
    ```
 
-3. **Filtering & Sorting** (GET /todos)
-   - `?completed=true` — Filter by completion status
-   - `?search=keyword` — Search in title/description
-   - `?sortBy=createdAt&order=desc` — Sorting
+2. **Add tasks** — Prompt for task description, add to list
 
-4. **Validation**
-   - Title is required, 1-200 characters
-   - Return 400 with validation errors
+3. **List tasks** — Show all tasks with numbers and completion status
+   ```
+   Your Tasks:
+   1. [ ] Buy groceries
+   2. [x] Finish homework
+   3. [ ] Call mom
+   ```
 
-5. **Error Handling**
-   - 404 for missing todos
-   - 400 for validation errors
-   - Use ProblemDetails format
+4. **Complete task** — Mark a task as done by number
 
-### Architecture Requirements
+5. **Remove task** — Delete a task by number
 
-- Use Dependency Injection for the todo "repository"
-- Create a `ITodoService` interface
-- Implement an `InMemoryTodoService`
-- Use DTOs for input/output (don't expose internal models directly)
-- Add request/response logging middleware
+6. **Exit** — Quit the program
 
-### Endpoints Summary
+### Task Data
 
-| Method | Route | Description | Response |
-|--------|-------|-------------|----------|
-| GET | /todos | List todos | 200 + array |
-| GET | /todos/{id} | Get todo | 200 or 404 |
-| POST | /todos | Create todo | 201 + location |
-| PUT | /todos/{id} | Update todo | 200 or 404 |
-| DELETE | /todos/{id} | Delete todo | 204 or 404 |
-| PATCH | /todos/{id}/complete | Mark complete | 200 or 404 |
+Each task should have:
+- Description (text)
+- Completed status (yes/no)
+
+### Edge Cases to Handle
+
+- Empty task list ("No tasks yet!")
+- Invalid menu choice
+- Invalid task number
+- Empty description
 
 ## Bonus Challenges
 
-- Add pagination (`?page=1&pageSize=10`)
-- Add bulk operations (`DELETE /todos` with body)
-- Add OpenAPI documentation with Swagger
-- Add request rate limiting
-- Add response caching
-
-## Project Structure
-
-```
-TodoApi/
-├── Program.cs           # App entry, DI setup, endpoints
-├── Models/
-│   └── Todo.cs
-├── DTOs/
-│   ├── CreateTodoDto.cs
-│   ├── UpdateTodoDto.cs
-│   └── TodoResponseDto.cs
-├── Services/
-│   ├── ITodoService.cs
-│   └── InMemoryTodoService.cs
-└── Middleware/
-    └── RequestLoggingMiddleware.cs
-```
+- Save tasks to a file, load on startup
+- Add due dates to tasks
+- Show only incomplete tasks
+- Search tasks by keyword
+- Add priority levels (high, medium, low)
 
 ## Getting Started
 
 ```bash
-dotnet new webapi -minimal -n TodoApi
-cd TodoApi
-# Start building...
-dotnet run
+cd weekly/week-01
+dotnet new console -n TaskList
+cd TaskList
+# Start coding in Program.cs
 ```
+
+## Suggested Approach
+
+1. Start with a simple `List<string>` for task descriptions
+2. Build the menu loop first
+3. Add each feature one at a time
+4. Refactor to use a `Task` class if you want (optional for week 1)
+
+## Example Session
+
+```
+=== Task Manager ===
+1. Add task
+2. List tasks
+3. Complete task
+4. Remove task
+5. Exit
+
+Choose: 1
+Enter task: Buy milk
+Added: Buy milk
+
+Choose: 1  
+Enter task: Read C# book
+Added: Read C# book
+
+Choose: 2
+Your Tasks:
+1. [ ] Buy milk
+2. [ ] Read C# book
+
+Choose: 3
+Task number to complete: 1
+Completed: Buy milk
+
+Choose: 2
+Your Tasks:
+1. [x] Buy milk
+2. [ ] Read C# book
+
+Choose: 5
+Goodbye!
+```
+
+## What You're Learning
+
+- Console I/O (`ReadLine`, `WriteLine`)
+- Control flow (`while`, `switch` or `if/else`)
+- Collections (`List<T>`)
+- Basic program structure
+- Input validation
 
 ## Submission
 
-When complete:
 ```bash
 git add .
-git commit -m "Week 1: TODO API with in-memory storage"
+git commit -m "Week 1: Task List CLI"
 git push
 ```
 
-## Grading Criteria
+## Grading
 
 | Criteria | Points |
 |----------|--------|
-| All CRUD endpoints work | 25 |
-| Proper HTTP status codes | 15 |
-| Validation implemented | 15 |
-| DI and service pattern | 15 |
-| DTOs used correctly | 10 |
-| Error handling | 10 |
-| Code organization | 10 |
-| **Bonus**: Extra features | +5 each |
+| Menu loop works | 20 |
+| Add task works | 20 |
+| List tasks works | 20 |
+| Complete task works | 15 |
+| Remove task works | 15 |
+| Handles edge cases | 10 |
+| **Bonus features** | +10 each |
 
 **Total**: 100 points (+bonus)

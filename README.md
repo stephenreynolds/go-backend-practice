@@ -13,18 +13,19 @@ Daily and weekly C#/ASP.NET backend development practice to stay sharp and impro
 └── PROGRESS.md      # Tracking completed work
 ```
 
-## Current Focus Areas
+## Learning Path
 
-1. **ASP.NET Core Fundamentals** — Controllers, routing, middleware, DI
-2. **Data Access** — EF Core, Dapper, raw ADO.NET, migrations
-3. **API Design** — REST best practices, versioning, documentation
-4. **Authentication/Authorization** — JWT, OAuth, Identity, policies
-5. **Testing** — Unit tests, integration tests, mocking
-6. **Performance** — Caching, async patterns, profiling
-7. **Architecture** — Clean architecture, CQRS, domain-driven design
-8. **DevOps** — Docker, CI/CD, health checks, logging
-9. **Real-time** — SignalR, WebSockets
-10. **Modern C#** — Records, pattern matching, source generators
+**Phase 0**: C# Fundamentals — Console apps, syntax, collections  
+**Phase 1**: ASP.NET Core Basics — First APIs, routing, DI  
+**Phase 2**: Data Access — EF Core, SQL, persistence  
+**Phase 3**: API Design — REST, versioning, security  
+**Phase 4**: Testing — Unit tests, integration tests  
+**Phase 5**: Architecture — Clean architecture, patterns  
+**Phase 6**: Performance — Caching, async, real-time  
+**Phase 7**: DevOps — Docker, CI/CD  
+**Beyond**: Advanced topics, continuous learning
+
+*Assumes programming experience but no C#/backend knowledge.*
 
 ## Rules
 

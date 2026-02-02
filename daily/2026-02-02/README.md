@@ -1,69 +1,104 @@
-# Day 1: Minimal API Basics
+# Day 1: Hello C#
 
-**Estimated Time**: 20-30 minutes  
+**Estimated Time**: 15-20 minutes  
 **Difficulty**: ⭐ Beginner  
-**Topic**: ASP.NET Core Minimal APIs
+**Topic**: Your first C# program
 
 ## Objective
 
-Create a minimal API that acts as a simple calculator. No controllers, no MVC — just clean, minimal endpoints.
+Get your C# environment set up and write your first program. No web stuff yet — just the basics.
 
-## Requirements
+## Prerequisites
 
-1. Create a new minimal API project
-2. Implement these endpoints:
+Install the .NET SDK if you haven't:
+```bash
+# Check if installed
+dotnet --version
 
-| Method | Route | Description | Example |
-|--------|-------|-------------|---------|
-| GET | `/add/{a}/{b}` | Add two numbers | `/add/5/3` → `8` |
-| GET | `/subtract/{a}/{b}` | Subtract b from a | `/subtract/10/4` → `6` |
-| GET | `/multiply/{a}/{b}` | Multiply two numbers | `/multiply/6/7` → `42` |
-| GET | `/divide/{a}/{b}` | Divide a by b | `/divide/20/4` → `5` |
+# If not, install via your package manager or https://dotnet.microsoft.com/download
+```
 
-3. Handle edge cases:
-   - Division by zero should return 400 Bad Request with a message
-   - Non-numeric inputs should return 400 Bad Request
+## Challenge
 
-4. Add a root endpoint `GET /` that returns API info:
-   ```json
-   {
-     "name": "Calculator API",
-     "version": "1.0",
-     "endpoints": ["/add", "/subtract", "/multiply", "/divide"]
-   }
+1. **Create a new console project**
+   ```bash
+   mkdir HelloCSharp && cd HelloCSharp
+   dotnet new console
    ```
+
+2. **Edit `Program.cs`** to:
+   - Ask the user for their name
+   - Greet them by name
+   - Tell them the current date and time
+
+3. **Expected output**:
+   ```
+   What is your name? Stephen
+   Hello, Stephen!
+   Today is Monday, February 2, 2026 at 1:05 AM.
+   ```
+
+## Hints
+
+<details>
+<summary>Reading user input</summary>
+
+```csharp
+Console.Write("Prompt: ");
+string input = Console.ReadLine();
+```
+</details>
+
+<details>
+<summary>Getting current date/time</summary>
+
+```csharp
+DateTime now = DateTime.Now;
+// or use string formatting
+Console.WriteLine($"It is {DateTime.Now}");
+```
+</details>
+
+<details>
+<summary>Formatting dates</summary>
+
+```csharp
+DateTime.Now.ToString("dddd, MMMM d, yyyy")  // Monday, February 2, 2026
+DateTime.Now.ToString("h:mm tt")              // 1:05 AM
+```
+</details>
 
 ## Bonus Challenges (Optional)
 
-- Add a `POST /calculate` endpoint that accepts JSON:
-  ```json
-  { "operation": "add", "a": 5, "b": 3 }
-  ```
-- Add request logging middleware
-- Return results as JSON objects: `{ "result": 8, "operation": "add" }`
+- Add your local timezone to the output
+- Ask for their birth year and calculate their age
+- Make the greeting change based on time of day ("Good morning", "Good afternoon", etc.)
 
-## Getting Started
+## Running Your Code
 
 ```bash
-dotnet new webapi -minimal -n Calculator
-cd Calculator
-# Edit Program.cs
 dotnet run
 ```
 
+## What You're Learning
+
+- `dotnet new` — Creating projects
+- `dotnet run` — Building and running
+- `Console.WriteLine()` — Output
+- `Console.ReadLine()` — Input
+- String interpolation (`$"Hello, {name}!"`)
+- `DateTime` — Working with dates/times
+
 ## Submission
 
-When complete:
 ```bash
 git add .
-git commit -m "Day 1: Minimal API Calculator"
+git commit -m "Day 1: Hello C#"
 git push
 ```
 
-Then let me know and I'll review your code!
+Then let me know — I'll take a look!
 
-## Learning Resources
+## Next Up
 
-- [Minimal APIs Overview](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/overview)
-- [Route Parameters](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/parameter-binding)
-- [Return Types](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis/responses)
+Tomorrow: Variables, types, and type inference in C#.
