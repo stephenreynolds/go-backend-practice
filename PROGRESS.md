@@ -11,6 +11,7 @@
 | Date       | Day | Topic                     | Status |
 |------------|-----|---------------------------|--------|
 | 2026-02-02 | 1   | Hello Go                  | ✅     |
+| 2026-02-03 | 2   | Variables, Types, Constants | 🔜     |
 
 ## Weekly Projects
 
