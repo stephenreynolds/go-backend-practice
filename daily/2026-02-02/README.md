@@ -1,104 +1,92 @@
-# Day 1: Hello C#
+# Day 1: Hello Go
 
-**Estimated Time**: 15-20 minutes  
-**Difficulty**: ⭐ Beginner  
-**Topic**: Your first C# program
+Welcome to Go! Today we set up the environment and write our first programs.
 
-## Objective
+## Objectives
 
-Get your C# environment set up and write your first program. No web stuff yet — just the basics.
+1. Install Go and verify setup
+2. Understand Go workspace and modules
+3. Write and run your first Go program
+4. Learn about packages, imports, and `fmt`
 
-## Prerequisites
+## Setup
 
-Install the .NET SDK if you haven't:
 ```bash
-# Check if installed
-dotnet --version
+# Check Go is installed
+go version
+# Should show: go version go1.21+ (or newer)
 
-# If not, install via your package manager or https://dotnet.microsoft.com/download
+# Create module for today's challenge
+cd daily/2026-02-02
+go mod init hello
 ```
 
 ## Challenge
 
-1. **Create a new console project**
-   ```bash
-   mkdir HelloCSharp && cd HelloCSharp
-   dotnet new console
-   ```
+### Part 1: Hello World
+Create `main.go`:
+```go
+package main
 
-2. **Edit `Program.cs`** to:
-   - Ask the user for their name
-   - Greet them by name
-   - Tell them the current date and time
+import "fmt"
 
-3. **Expected output**:
-   ```
-   What is your name? Stephen
-   Hello, Stephen!
-   Today is Monday, February 2, 2026 at 1:05 AM.
-   ```
-
-## Hints
-
-<details>
-<summary>Reading user input</summary>
-
-```csharp
-Console.Write("Prompt: ");
-string input = Console.ReadLine();
+func main() {
+    fmt.Println("Hello, Go!")
+}
 ```
-</details>
 
-<details>
-<summary>Getting current date/time</summary>
-
-```csharp
-DateTime now = DateTime.Now;
-// or use string formatting
-Console.WriteLine($"It is {DateTime.Now}");
-```
-</details>
-
-<details>
-<summary>Formatting dates</summary>
-
-```csharp
-DateTime.Now.ToString("dddd, MMMM d, yyyy")  // Monday, February 2, 2026
-DateTime.Now.ToString("h:mm tt")              // 1:05 AM
-```
-</details>
-
-## Bonus Challenges (Optional)
-
-- Add your local timezone to the output
-- Ask for their birth year and calculate their age
-- Make the greeting change based on time of day ("Good morning", "Good afternoon", etc.)
-
-## Running Your Code
-
+Run it:
 ```bash
-dotnet run
+go run main.go
 ```
 
-## What You're Learning
+### Part 2: Explore fmt
+Expand your program to demonstrate different `fmt` functions:
 
-- `dotnet new` — Creating projects
-- `dotnet run` — Building and running
-- `Console.WriteLine()` — Output
-- `Console.ReadLine()` — Input
-- String interpolation (`$"Hello, {name}!"`)
-- `DateTime` — Working with dates/times
+1. Use `fmt.Printf` with format verbs (`%s`, `%d`, `%v`)
+2. Use `fmt.Sprintf` to format a string without printing
+3. Print multiple values with `fmt.Println`
+
+Example output:
+```
+Hello, Go!
+My name is Stephen and I'm learning Go in 2026
+Formatted string: Go is awesome!
+Multiple: one two three
+```
+
+### Part 3: Multiple Files
+Create a second file `greet.go` in the same package:
+- Define a function `Greet(name string) string` that returns a greeting
+- Call it from `main.go`
+
+This demonstrates how Go packages work with multiple files.
+
+## Bonus Challenges
+
+- [ ] Use `fmt.Errorf` to create a formatted error
+- [ ] Explore `fmt.Scan` to read user input
+- [ ] Check out `go fmt` to auto-format your code
+- [ ] Run `go build` to create a binary
+
+## Key Concepts
+
+- **package main**: Entry point package
+- **func main()**: Entry point function
+- **import**: Brings in other packages
+- **fmt**: Format package for I/O
+- **:=**: Short variable declaration
+
+## Resources
+
+- [Go Tour: Hello World](https://go.dev/tour/welcome/1)
+- [fmt package docs](https://pkg.go.dev/fmt)
 
 ## Submission
 
+When done:
 ```bash
 git add .
-git commit -m "Day 1: Hello C#"
+git commit -m "Add solution to daily 2026-02-02: Hello Go"
 git push
 ```
-
-Then let me know — I'll take a look!
-
-## Next Up
-
-Tomorrow: Variables, types, and type inference in C#.
