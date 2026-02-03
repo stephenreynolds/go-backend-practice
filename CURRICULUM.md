@@ -102,6 +102,30 @@
 
 ---
 
+## Ongoing (Day 51+)
+
+After completing the core curriculum, daily challenges continue indefinitely:
+
+### Challenge Categories (rotating)
+- **Real-world problems:** Build practical tools and utilities
+- **Algorithm practice:** Data structures, LeetCode-style problems in Go
+- **Open source exploration:** Read and understand popular Go codebases
+- **New libraries:** Explore ecosystem (chi, echo, sqlx, ent, etc.)
+- **Deep dives:** Performance optimization, profiling, advanced concurrency
+- **System design:** Design and implement larger systems
+- **Cloud services:** AWS/GCP SDKs, serverless, infrastructure as code
+- **Security:** Auth patterns, encryption, secure coding practices
+
+### Weekly Projects (ongoing)
+- Contribute to open source
+- Build portfolio-worthy projects
+- Clone popular services (mini-Redis, mini-Docker, etc.)
+- Side projects and experiments
+
+*Challenges adapt based on interests, job market trends, and skill gaps.*
+
+---
+
 ## Resources
 
 - [Go Tour](https://go.dev/tour/)
