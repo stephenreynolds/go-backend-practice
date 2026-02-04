@@ -12,6 +12,7 @@
 |------------|-----|---------------------------|--------|
 | 2026-02-02 | 1   | Hello Go                  | ✅     |
 | 2026-02-03 | 2   | Variables, Types, Constants | 🔜     |
+| 2026-02-04 | 3   | Functions, Multiple Returns | 🔜     |
 
 ## Weekly Projects
 
