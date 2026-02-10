@@ -14,6 +14,7 @@
 | 2026-02-04 | 3   | Functions, Multiple Returns | ⏭️     |
 | 2026-02-05 | 2   | Variables, Types, Constants | ✅     |
 | 2026-02-09 | 3   | Functions, Multiple Returns | ⏳     |
+| 2026-02-10 | 4   | Control Flow (if/for/switch) | 🔜     |
 
 ## Weekly Projects
 | Week | Project             | Status |
