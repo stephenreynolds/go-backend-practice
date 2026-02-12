@@ -2,8 +2,8 @@
 
 ## Current Status
 - **Phase:** 1 — Go Fundamentals
-- **Week:** 1
-- **Day:** 3
+- **Week:** 2
+- **Day:** 6
 - **Started:** 2026-02-02
 
 ## Daily Log
@@ -15,12 +15,14 @@
 | 2026-02-05 | 2   | Variables, Types, Constants | ✅     |
 | 2026-02-09 | 3   | Functions, Multiple Returns | ⏳     |
 | 2026-02-10 | 4   | Control Flow (if/for/switch) | ⏳     |
-| 2026-02-11 | 5   | Arrays, Slices, Slice Ops | 🔜     |
+| 2026-02-11 | 5   | Arrays, Slices, Slice Ops | ⏳     |
+| 2026-02-12 | 6   | Maps and Structs          | 🔜     |
 
 ## Weekly Projects
 | Week | Project             | Status |
 |------|---------------------|--------|
-| 1    | CLI Task Manager    | 🔜     |
+| 1    | CLI Task Manager    | ⏳     |
+| 2    | File-based Data Store | 🔜   |
 
 ## Legend
 - ⏳ In Progress
