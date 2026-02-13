@@ -3,7 +3,7 @@
 ## Current Status
 - **Phase:** 1 — Go Fundamentals
 - **Week:** 2
-- **Day:** 6
+- **Day:** 7
 - **Started:** 2026-02-02
 
 ## Daily Log
@@ -17,6 +17,7 @@
 | 2026-02-10 | 4   | Control Flow (if/for/switch) | ⏳     |
 | 2026-02-11 | 5   | Arrays, Slices, Slice Ops | ⏳     |
 | 2026-02-12 | 6   | Maps and Structs          | 🔜     |
+| 2026-02-13 | 7   | Pointers and Memory       | 🔜     |
 
 ## Weekly Projects
 | Week | Project             | Status |
